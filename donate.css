@@ -1,30 +1,26 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Montserrat";
-  overflow: hidden;
+  overflow-x: hidden;
+  color: #00bcd4;
 }
+
 header {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  -webkit-background-size: cover;
-  background-image: linear-gradient(
-      rgba(0, 168, 255, 0.3),
-      rgba(0, 168, 255, 0.3)
-    ),
-    url(payfast-add-on.jpg);
+  background-image: url(bg.jpeg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center center;
   position: relative;
-  clip-path: circle(70% at 50% 0);
 }
 .logo {
   margin-left: 5px;
-  margin-top: 20px;
   font-size: 30px;
   text-align: center;
   cursor: pointer;
@@ -38,14 +34,15 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .menu li a {
   text-decoration: none;
   font-size: 19px;
-  color: black;
+  color: white;
 }
 .menu li a:hover {
-  background-color: white;
+  background-color: brown;
   padding: 6px;
 }
 .name {
@@ -55,6 +52,7 @@ ul {
 .abc {
   text-align: center;
   margin-top: 500px;
+  color: white;
 }
 @media (max-width: 600px) {
   .menu {
@@ -92,4 +90,3 @@ ul {
     margin-top: 40px;
   }
 }
-
