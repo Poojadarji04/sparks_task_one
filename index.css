@@ -4,57 +4,154 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
-  font-family: "Montserrat";
+  font-family: sans-serif;
   overflow-x: hidden;
 }
 
-header {
+section {
+  padding: 5rem 0;
+}
+
+.container {
   width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(
-      rgba(0, 168, 255, 0.3),
-      rgba(0, 168, 255, 0.3)
-    ),
-    url(payfast-add-on.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  position: relative;
-  clip-path: circle(70% at 50% 0);
+  max-width: 115rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
-.logo {
-  margin-left: 5px;
-  font-size: 30px;
-  text-align: center;
-  cursor: pointer;
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
+
+a {
+  text-decoration: none;
+}
+
 ul {
   list-style: none;
 }
 
-.menu {
-  margin-top: 60px;
+/******************* Nav Styles *******************/
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-}
-.menu li a {
-  text-decoration: none;
-  font-size: 19px;
-  color: black;
-}
-.menu li a:hover {
-  background-color: white;
-  padding: 6px;
-}
-.name {
-  text-align: center;
-  margin-top: 490px;
+  z-index: 999;
 }
 
-@media (max-width: 600px) {
-  .menu {
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  text-align: center;
+}
+
+.nav-logo {
+  margin: 1rem 0;
+}
+
+.nav-logo a {
+  font-size: 2.4rem;
+  color: #fafafa;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-link {
+  display: block;
+  font-size: 1.8rem;
+  color: #fafafa;
+  padding: 2rem;
+  border-radius: 0.4rem;
+}
+
+.nav-link:hover {
+  background-color: #ce587b;
+}
+
+/* Hero Style */
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      135deg,
+      rgba(49, 24, 131, 0.9) 30%,
+      rgba(72, 156, 149, 0.8) 100%
+    ),
+    url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80") center no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 50rem;
+  color: #fafafa;
+  text-transform: capitalize;
+  text-align: center;
+  margin: auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  transform: translateY(-20%);
+}
+
+.btn {
+  font-size: 1.6rem;
+  background-color: #ed648c;
+  border-radius: 2rem;
+  color: #fafafa;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  transition: all 650ms;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background-color: #ce587b;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+
+  .nav-logo {
+    margin-top: 10rem;
+  }
+
+  nav {
     flex-direction: column;
   }
+
+  .nav-link {
+    font-size: 1.6rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
 }
+
